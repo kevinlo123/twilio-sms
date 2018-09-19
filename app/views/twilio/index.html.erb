@@ -1,0 +1,8 @@
+<h1>Twilio</h1>
+<%= form_for @phone, url: {action: "create"} do |f| %>
+   <h3>Number</h3>
+   <%= f.telephone_field :number %><br/>
+   <h3>Message</h3>
+   <%= f.text_area :body %><br/>
+   <%= f.submit "Send Text"%>
+<% end %>
