@@ -4,12 +4,33 @@
     <title>TextSender</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://use.fontawesome.com/f5fb6e9872.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+   <nav class="navbar navbar-expand-lg d-flex navbar-dark bg-dark" style="padding: 16px;">
+      <a class="navbar-brand" href="#">Text <span style="color: dodgerblue;">Buddy</span><i class="far fa-envelope"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav active  ml-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+               <a class="nav-link" href="#">Send message</a>
+            </li>
+         </ul>
+      </div>
+   </nav>
+   <%= yield %>
+   <footer class="page-footer font-small blue bg-dark">
+      <div class="footer-copyright text-center py-3" style="color: white;">© 2018 Copyright:
+         <a href="https://mdbootstrap.com/bootstrap-tutorial/">Text Buddy</a>
+      </div>
+   </footer>
   </body>
 </html>

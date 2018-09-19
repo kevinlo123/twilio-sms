@@ -14,7 +14,8 @@ class TwilioController < ApplicationController
       number[0] == "1" ? number[0] = "" : number 
       return number
    end
-   private def phone_params
+   private 
+      def phone_params
                params.require(:phone).permit(:number,:body)
-            end
+      end
 end
