@@ -1,16 +1,18 @@
-<div style="background-color: #e9ecef;"class="form-container">
-   <div class="jumbotron">
-      <h1 class="display-4">Twilio API</h1>
-      <p class="lead">This is a simple rails application utilizing Twilios SMS API</p>
-      <hr class="my-4">
-      <p>The applications current build is just made to send myself sms text messages In order to send anyone Messages I need to upgrade my account which might come in the future</p>
-      <%= form_for @phone, url: {action: "create"} do |f| %>
-         <h3>Phone Number</h3>
-         <%= f.telephone_field :number, class: "form-control" %><br/>
-         <h3>Message</h3>
-         <%= f.text_area :body, class: "form-control" %><br/>
-         <%= f.submit "Send Text", class: "btn btn-primary btn-lg"%>
-      <% end %>
+<div style="background-color: #e9ecef;" class="form-container">
+   <div class="container-fluid">
+      <div class="jumbotron">
+         <h1 class="display-4">Twilio API</h1>
+         <p class="lead">This is a simple rails application utilizing Twilios SMS API</p>
+         <hr class="my-4">
+         <p>The applications current build is just made to send myself sms text messages In order to send anyone Messages I need to upgrade my account which might come in the future</p>
+         <%= form_for @phone, url: {action: "create"} do |f| %>
+            <h3>Phone Number</h3>
+            <%= f.telephone_field :number, class: "form-control" %><br/>
+            <h3>Message</h3>
+            <%= f.text_area :body, class: "form-control" %><br/>
+            <%= f.submit "Send Text", class: "btn btn-primary btn-lg"%>
+         <% end %>
+      </div>
    </div>
 </div>
 
